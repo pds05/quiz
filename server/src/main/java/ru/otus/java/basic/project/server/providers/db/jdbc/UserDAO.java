@@ -127,7 +127,7 @@ public class UserDAO implements UserService {
     }
 
     @Override
-    public void registration(ClientHandler clientHandler, String login, String password, String username, String email, String phoneNumber) throws AuthException {
+    public void registration(ClientHandler clientHandler, String login, String password, String username) throws AuthException {
         if (login.trim().length() < 3 || password.trim().length() < 6 || username.trim().length() < 1) {
             throw new AuthException("Логин 3+ символа, Пароль 6+ символов, Имя пользователя 1+ символ");
         }

@@ -17,16 +17,12 @@ public class InMemoryAuthenticationProvider implements AuthenticationProvider {
         private String login;
         private String password;
         private String username;
-        private String email;
-        private String phoneNumber;
         private List<AuthorizationRole> roles = new ArrayList<>();
 
-        public User(String login, String password, String username, String email, String phoneNumber, AuthorizationRole role) {
+        public User(String login, String password, String username, AuthorizationRole role) {
             this.login = login;
             this.password = password;
             this.username = username;
-            this.email = email;
-            this.phoneNumber = phoneNumber;
             roles.add(role);
         }
 
@@ -45,22 +41,6 @@ public class InMemoryAuthenticationProvider implements AuthenticationProvider {
         public void setUsername(String username) {
             this.username = username;
         }
-
-        public String getEmail() {
-            return email;
-        }
-
-        public void setEmail(String email) {
-            this.email = email;
-        }
-
-        public String getPhoneNumber() {
-            return phoneNumber;
-        }
-
-        public void setPhoneNumber(String phoneNumber) {
-            this.phoneNumber = phoneNumber;
-        }
     }
 
     private Server server;
@@ -69,10 +49,10 @@ public class InMemoryAuthenticationProvider implements AuthenticationProvider {
     public InMemoryAuthenticationProvider(Server server) {
         this.server = server;
         this.users = new ArrayList<>();
-        this.users.add(new User("login1", "pass1", "user1", "user1@mail.ru", "79373332211", AuthorizationRole.USER));
-        this.users.add(new User("login2", "pass2", "user2", "user2@mail.ru", "79373332212", AuthorizationRole.USER));
-        this.users.add(new User("login3", "pass3", "user3", "user3@mail.ru", "79373332213", AuthorizationRole.USER));
-        this.users.add(new User("superuser", "superuser", "superuser", "superuser@mail.ru", "79373332210", AuthorizationRole.ADMIN));
+        this.users.add(new User("login1", "pass1", "user1", AuthorizationRole.USER));
+        this.users.add(new User("login2", "pass2", "user2", AuthorizationRole.USER));
+        this.users.add(new User("login3", "pass3", "user3", AuthorizationRole.USER));
+        this.users.add(new User("superuser", "superuser", "superuser", AuthorizationRole.ADMIN));
     }
 
     @Override
@@ -137,7 +117,7 @@ public class InMemoryAuthenticationProvider implements AuthenticationProvider {
     }
 
     @Override
-    public void registration(ClientHandler clientHandler, String login, String password, String username, String email, String phoneNumber) throws AuthException {
+    public void registration(ClientHandler clientHandler, String login, String password, String username) throws AuthException {
         if (login.trim().length() < 3 || password.trim().length() < 6 || username.trim().length() < 1) {
             throw new AuthException("Логин 3+ символа, Пароль 6+ символов, Имя пользователя 1+ символ");
         }
@@ -147,7 +127,7 @@ public class InMemoryAuthenticationProvider implements AuthenticationProvider {
         if (isUsernameAlreadyExist(username)) {
             throw new AuthException("Указанное имя пользователя уже занято");
         }
-        users.add(new User(login, password, username, email, phoneNumber, AuthorizationRole.USER));
+        users.add(new User(login, password, username, AuthorizationRole.USER));
         clientHandler.setUsername(username);
         server.subscribe(clientHandler);
     }

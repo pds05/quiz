@@ -44,12 +44,12 @@ public class OperationLogic {
             @Override
             public boolean process(Server server, ClientHandler clientHandler, String inputMessage) {
                 String[] elements = inputMessage.split(" ");
-                if (elements.length != 6) {
-                    clientHandler.sendMessage("Неверный формат команды. Формат команды: /register login password username email phoneNumber");
+                if (elements.length != 4) {
+                    clientHandler.sendMessage("Неверный формат команды. Формат команды: /register login password username");
                     return false;
                 }
                 try {
-                    server.getUserService().registration(clientHandler, elements[1], elements[2], elements[3], elements[4], elements[5]);
+                    server.getUserService().registration(clientHandler, elements[1], elements[2], elements[3]);
                     clientHandler.sendMessage("/register-ok: создана учетная запись " + clientHandler.getUser().getUsername());
                     return true;
                 } catch (AuthException ae) {

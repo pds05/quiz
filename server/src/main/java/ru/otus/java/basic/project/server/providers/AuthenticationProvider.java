@@ -8,7 +8,7 @@ public interface AuthenticationProvider {
 
     void authenticate(ClientHandler clientHandler, String login, String password) throws AuthException;
 
-    void registration(ClientHandler clientHandler, String login, String password, String username, String email, String phoneNumber) throws AuthException;
+    void registration(ClientHandler clientHandler, String login, String password, String username) throws AuthException;
 
     boolean authorization(ClientHandler clientHandler, String command);
 }
