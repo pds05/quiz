@@ -1,0 +1,1 @@
+CREATE DATABESE chat_db;

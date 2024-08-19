@@ -1,0 +1,161 @@
+{
+  "title" : "Калькулятор",
+  "questions" : [
+    {
+      "question" : "20 - 1?",
+      "answer" : "19",
+      "order" : "20",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "19 - 1?",
+      "answer" : "18",
+      "order" : "19",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "18 - 1?",
+      "answer" : "17",
+      "order" : "18",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "17 - 1?",
+      "answer" : "16",
+      "order" : "17",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "16 - 1?",
+      "answer" : "15",
+      "order" : "16",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "15 - 1?",
+      "answer" : "14",
+      "order" : "15",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "14 - 1?",
+      "answer" : "13",
+      "order" : "14",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "13 - 1?",
+      "answer" : "12",
+      "order" : "13",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "12 - 1?",
+      "answer" : "11",
+      "order" : "12",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "11 - 1?",
+      "answer" : "10",
+      "order" : "11",
+      "difficulty" : "1"
+    },
+    {
+      "question" : "10 - 1?",
+      "answer" : "9",
+      "order" : "10",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "9 - 1?",
+      "answer" : "8",
+      "order" : "9",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "8 - 1?",
+      "answer" : "7",
+      "order" : "8",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "7 - 1?",
+      "answer" : "6",
+      "order" : "7",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "6 - 1?",
+      "answer" : "5",
+      "order" : "6",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "5 - 1?",
+      "answer" : "4",
+      "order" : "5",
+      "difficulty" : "5"
+    },
+    {
+      "question" : "4 - 1?",
+      "answer" : "3",
+      "order" : "5",
+      "difficulty" : "1"
+    },
+    {
+      "question" : "3 - 1?",
+      "answer" : "2",
+      "order" : "3",
+      "difficulty" : ""
+    },
+    {
+      "question" : "2 - 1?",
+      "answer" : "1",
+      "order" : "2",
+      "difficulty" : ""
+    },
+    {
+      "question" : "1 - 1?",
+      "answer" : "0",
+      "order" : "1",
+      "difficulty" : ""
+    },
+    {
+      "question" : "1 + 1?",
+      "answer" : "2",
+      "order" : "",
+      "difficulty" : "10"
+    },
+    {
+      "question" : "1 + 2?",
+      "answer" : "3",
+      "order" : "",
+      "difficulty" : "10"
+    },
+    {
+      "question" : "1 + 3?",
+      "answer" : "4",
+      "order" : "",
+      "difficulty" : "10"
+    },
+    {
+      "question" : "1 + 4?",
+      "answer" : "5",
+      "order" : "",
+      "difficulty" : "1"
+    },
+    {
+      "question" : "1 + 5?",
+      "answer" : "6",
+      "order" : "",
+      "difficulty" : "1"
+    },
+    {
+      "question" : "1 + 6?",
+      "answer" : "7",
+      "order" : "",
+      "difficulty" : "1"
+    }
+  ]
+}
